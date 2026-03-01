@@ -1,0 +1,181 @@
+/* Root */
+.root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.root.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.root.closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mask */
+.mask {
+  position: fixed;
+  inset: 0;
+  background: var(--mask-bg);
+}
+
+/* Wrap */
+.wrap {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.wrap.centered {
+  align-items: center;
+  padding: 0;
+}
+
+/* Modal */
+.modal {
+  position: relative;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow:
+    0 6px 16px 0 var(--modal-shadow-1),
+    0 3px 6px -4px var(--modal-shadow-2),
+    0 9px 28px 8px var(--modal-shadow-3);
+  max-width: calc(100vw - 32px);
+  height: fit-content;
+  animation: modalIn 0.2s ease;
+}
+
+@keyframes modalIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close button */
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  z-index: 1;
+}
+
+.closeBtn:hover {
+  color: var(--text-primary);
+}
+
+/* Header */
+.header {
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--divider-color);
+}
+
+/* Body */
+.body {
+  padding: 24px;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--divider-color);
+}
+
+/* Footer buttons */
+.cancelBtn,
+.okBtn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--btn-border);
+  background: var(--white);
+  color: var(--text-primary);
+}
+
+.cancelBtn:hover {
+  border-color: var(--btn-hover-color);
+  color: var(--btn-hover-color);
+}
+
+.okBtn.primary {
+  background: var(--primary-btn-bg);
+  border-color: var(--primary-btn-bg);
+  color: var(--white);
+}
+
+.okBtn.primary:hover {
+  background: var(--primary-btn-hover);
+  border-color: var(--primary-btn-hover);
+}
+
+.okBtn.danger {
+  background: var(--danger-btn-bg);
+  border-color: var(--danger-btn-bg);
+  color: var(--white);
+}
+
+.okBtn.danger:hover {
+  background: var(--danger-btn-hover);
+  border-color: var(--danger-btn-hover);
+}
+
+.okBtn.secondary {
+  background: var(--white);
+  border-color: var(--btn-border);
+  color: var(--text-primary);
+}
+
+.okBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--spinner-border);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('https://cdn.prod.website-files.com/685ac9ba789341d7c2d8204f/685ac9ba789341d7c2d82086_SourceSans3-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('https://cdn.prod.website-files.com/685ac9ba789341d7c2d8204f/685ac9ba789341d7c2d82085_SourceSans3-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: fallback;
+}
+
+:root {
+  --white: #fff;
+  --light-gray: #eff7f7;
+  --dark-gray: #0e1820;
+  --green: #228128;
+  --green-hover: #47ad4d;
+  --green-light: #cef5ca;
+  --mint-bg: #dee8e8;
+  --charcoal: #363e44;
+  --charcoal-light: #375664;
+  --heading-color: #0e1820;
+  --text-secondary: #375664;
+  --border-color: #c4dcdc;
+  --danger-bg-hover: #f8e4e4;
+  --danger-color-hover: #3b0b0b;
+  --text-primary: rgba(0, 0, 0, 0.88);
+  --text-muted: rgba(0, 0, 0, 0.45);
+  --error: #ff4d4f;
+  --error-border: #d32f2f;
+  --error-border-hover: #b71c1c;
+  --error-shadow: rgba(211, 47, 47, 0.12);
+  --warning-border: #ed6c02;
+  --warning-border-hover: #e65100;
+  --warning-shadow: rgba(237, 108, 2, 0.12);
+  --placeholder-color: #a4bfbf;
+  --green-shadow: rgba(34, 129, 40, 0.12);
+  --mask-bg: rgba(0, 0, 0, 0.45);
+  --modal-shadow-1: rgba(0, 0, 0, 0.08);
+  --modal-shadow-2: rgba(0, 0, 0, 0.12);
+  --modal-shadow-3: rgba(0, 0, 0, 0.05);
+  --text-body: rgba(0, 0, 0, 0.65);
+  --divider-color: #f0f0f0;
+  --btn-border: #d9d9d9;
+  --btn-hover-color: #4096ff;
+  --primary-btn-bg: #1677ff;
+  --primary-btn-hover: #4096ff;
+  --danger-btn-bg: #ff4d4f;
+  --danger-btn-hover: #ff7875;
+  --spinner-border: rgba(255, 255, 255, 0.3);
+  --arrow-shadow: rgba(0, 0, 0, 0.04);
+  --primary-btn-shadow: rgba(22, 119, 255, 0.1);
+  --error-shadow-light: rgba(255, 77, 79, 0.1);
+  --warning: #faad14;
+  --warning-shadow-light: rgba(250, 173, 20, 0.1);
+  --disabled-bg: #f5f5f5;
+  --text-disabled: rgba(0, 0, 0, 0.25);
+  --option-hover-bg: rgba(0, 0, 0, 0.04);
+  --selected-option-bg: #e6f4ff;
+}
+
+body {
+  margin: 0;
+  color: var(--dark-gray);
+  font:
+    16px 'Source Sans 3',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  box-sizing: border-box;
+  background: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

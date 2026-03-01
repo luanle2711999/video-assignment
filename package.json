@@ -1,0 +1,72 @@
+{
+  "name": "mi-fec",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "json-server db.json -p 3001",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll=false",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "e2e:report": "playwright show-report",
+    "postinstall": "npx playwright install --with-deps"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.58.2",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "json-server": "^0.17.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.9.3",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts",
+      "!src/setupTests.ts",
+      "!src/react-app-env.d.ts",
+      "!src/**/index.ts",
+      "!src/types/**",
+      "!src/constants/**",
+      "!src/assets/**",
+      "!src/**/*.module.css"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

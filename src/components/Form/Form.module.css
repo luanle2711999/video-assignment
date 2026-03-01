@@ -1,0 +1,108 @@
+/* Form */
+.form {
+  width: 100%;
+}
+
+.vertical .formItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal .formItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.horizontal .label {
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 12px;
+  padding-top: 6px;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.inline .formItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.inline .label {
+  padding-right: 8px;
+  padding-top: 6px;
+  white-space: nowrap;
+}
+
+/* Form Item */
+.formItem {
+  margin-bottom: 20px;
+}
+
+.formItem:last-child {
+  margin-bottom: 0;
+}
+
+/* Label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.requiredMark {
+  color: var(--error);
+  font-size: 14px;
+}
+
+.tooltip {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-left: 4px;
+  cursor: help;
+}
+
+/* Control */
+.control {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Error */
+.error {
+  color: var(--error);
+  font-size: 12px;
+  margin-top: 4px;
+  line-height: 1.4;
+  animation: errorIn 0.2s ease;
+}
+
+@keyframes errorIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Extra */
+.extra {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 4px;
+  line-height: 1.4;
+}

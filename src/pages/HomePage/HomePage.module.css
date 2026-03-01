@@ -1,0 +1,19 @@
+.featureWrapper {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.searchWrapper {
+  max-width: 300px;
+  flex: 1;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}

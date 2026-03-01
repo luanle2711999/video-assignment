@@ -1,0 +1,177 @@
+/* Group (with addons) */
+.group {
+  display: inline-flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.group .inputWrapper {
+  flex: 1;
+  border-radius: 0;
+}
+
+.group .inputWrapper:first-child,
+.group > :first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.group .inputWrapper:last-child,
+.group > :last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Addon before / after */
+.addonBefore,
+.addonAfter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 14px;
+  white-space: nowrap;
+  font-family:
+    'Source Sans 3',
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.addonBefore {
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.addonAfter {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Input wrapper */
+.inputWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-family:
+    'Source Sans 3',
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.inputWrapper:hover {
+  border-color: var(--green-hover);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green-shadow);
+}
+
+/* Sizes */
+.sm {
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.md {
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.lg {
+  padding: 10px 14px;
+  font-size: 16px;
+}
+
+/* Native input */
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: var(--heading-color);
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
+}
+
+/* Prefix / Suffix */
+.prefix,
+.suffix {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+/* Clear button */
+.clearBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.clearBtn:hover {
+  background: var(--border-color);
+  color: var(--heading-color);
+}
+
+/* Status variants */
+.error {
+  border-color: var(--error-border);
+}
+
+.error:hover {
+  border-color: var(--error-border-hover);
+}
+
+.error:focus-within {
+  border-color: var(--error-border);
+  box-shadow: 0 0 0 2px var(--error-shadow);
+}
+
+.warning {
+  border-color: var(--warning-border);
+}
+
+.warning:hover {
+  border-color: var(--warning-border-hover);
+}
+
+.warning:focus-within {
+  border-color: var(--warning-border);
+  box-shadow: 0 0 0 2px var(--warning-shadow);
+}
+
+/* Disabled */
+.disabled {
+  background: var(--light-gray);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.disabled:hover {
+  border-color: var(--border-color);
+}
+
+.disabled .input {
+  cursor: not-allowed;
+}

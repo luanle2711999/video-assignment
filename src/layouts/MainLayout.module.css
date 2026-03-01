@@ -1,0 +1,12 @@
+.main {
+  padding: 0 32px 32px;
+  background: var(--mint-bg);
+  flex: 1;
+}
+
+.main h1 {
+  color: var(--heading-color);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 32px 0 24px;
+}
