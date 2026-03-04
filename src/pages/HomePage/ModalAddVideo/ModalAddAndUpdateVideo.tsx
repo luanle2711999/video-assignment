@@ -74,7 +74,8 @@ export const ModalAddVideo = ({ open, onCancel, onSuccess, video }: ModalAddVide
       onCancel={onCancel}
       footer={null}
       destroyOnClose
-      confirmLoading={submitting}>
+      confirmLoading={submitting}
+      mask={true}>
       <Suspense fallback={<div>Loading...</div>}>
         <Form
           key={String(open)}

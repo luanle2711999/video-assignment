@@ -83,21 +83,6 @@
             }
           },
           "releaseDate": "2026-02-28"
-        },
-        {
-          "id": 11,
-          "catIds": [
-            1,
-            2
-          ],
-          "name": "E2E Test Video 1772369092185",
-          "formats": {
-            "one": {
-              "res": "1080p",
-              "size": 1000
-            }
-          },
-          "releaseDate": "2026-03-01"
         }
       ]
     },

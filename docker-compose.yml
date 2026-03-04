@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    image: node:18-alpine
+    working_dir: /data
+    volumes:
+      - ./db.json:/data/db.json
+    command: npx json-server@0.17.4 db.json -p 3001 -H 0.0.0.0
+    ports:
+      - "3001:3001"
+    restart: unless-stopped

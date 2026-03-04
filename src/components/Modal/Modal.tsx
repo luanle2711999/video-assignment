@@ -156,9 +156,9 @@ export const Modal = ({
     </div>
   );
 
-  if (getContainer === false) {
+  if (!getContainer) {
     return modalContent;
   }
-
+  // https://react.dev/reference/react-dom/createPortal
   return createPortal(modalContent, getContainer ?? document.body);
 };
